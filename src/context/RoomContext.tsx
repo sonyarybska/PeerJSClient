@@ -18,6 +18,7 @@ import {
 
 import { UserContext } from "./UserContext";
 import { IPeer } from "../types/peer";
+import iceServers from "../iceServers";
 
 interface RoomValue {
     stream?: MediaStream;
@@ -109,9 +110,8 @@ export const RoomProvider: React.FunctionComponent = ({ children }) => {
 
     useEffect(() => {
         const peer = new Peer(userId, {
-            host: "localhost",
-            port: 9001,
-            path: "/",
+            host: "peerserver-du18.onrender.com",
+            config: {'iceServers': iceServers} 
         });
         setMe(peer);
 
