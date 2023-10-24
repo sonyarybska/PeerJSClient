@@ -55,8 +55,8 @@ export const Room = () => {
 
                     {Object.values(peersToShow as PeerState)
                         .filter((peer) => !!peer.stream)
-                        .map((peer) => (
-                            <div key={peer.peerId}>
+                        .map((peer,index) => (
+                            <div key={index}>
                                 <VideoPlayer stream={peer.stream} />
                                 <div>{peer.userName}</div>
                             </div>
