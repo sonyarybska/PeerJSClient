@@ -110,7 +110,7 @@ export const RoomProvider: React.FunctionComponent = ({ children }) => {
 
   useEffect(() => {
     const peer = new Peer(userId, {
-      host: "peer-server-qbnt.onrender.com",
+      host: "peerserver-du18.onrender.com",
       port: 443,
       path: "/",
       config: { iceServers: iceServers },
