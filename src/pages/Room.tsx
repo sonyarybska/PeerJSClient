@@ -48,7 +48,7 @@ export const Room = () => {
                 >
                     {screenSharingId !== userId && (
                         <div>
-                            <VideoPlayer stream={stream} />
+                            <VideoPlayer stream={stream} muted />
                             <NameInput />
                         </div>
                     )}
